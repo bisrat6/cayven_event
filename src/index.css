@@ -3,11 +3,72 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* LuxeVibe Brand Colors */
+    --background: 30 50% 97%; /* Soft ivory */
+    --foreground: 217 75% 13%; /* Deep navy */
+
+    --card: 0 0% 100%;
+    --card-foreground: 217 75% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 75% 13%;
+
+    --primary: 45 63% 53%; /* Champagne gold */
+    --primary-foreground: 217 75% 13%;
+
+    --secondary: 217 75% 13%; /* Deep navy */
+    --secondary-foreground: 30 50% 97%;
+
+    --muted: 30 30% 90%;
+    --muted-foreground: 217 40% 40%;
+
+    --accent: 340 50% 94%; /* Blush pink */
+    --accent-foreground: 217 75% 13%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 30 50% 97%;
+
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 45 63% 53%;
+
+    --radius: 0.75rem;
+
+    /* Custom luxury tokens */
+    --gold-light: 45 70% 65%;
+    --gold-dark: 45 55% 43%;
+    --navy-light: 217 60% 25%;
+    --blush-light: 340 60% 96%;
+    
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(45 63% 53%) 0%, hsl(45 55% 43%) 100%);
+    --gradient-navy: linear-gradient(135deg, hsl(217 75% 13%) 0%, hsl(217 60% 25%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsla(217 75% 13% / 0.7) 0%, hsla(217 75% 13% / 0.4) 100%);
+    
+    /* Shadows */
+    --shadow-elegant: 0 20px 40px -10px hsl(217 75% 13% / 0.15);
+    --shadow-gold: 0 10px 30px -5px hsl(45 63% 53% / 0.3);
+    --shadow-soft: 0 4px 20px hsl(217 40% 40% / 0.08);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
+
+@layer base {
   html {
     @apply scroll-smooth;
   }
   body {
-    @apply bg-brand-light font-sans antialiased;
+    @apply bg-background text-foreground font-sans antialiased;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif text-brand-dark;

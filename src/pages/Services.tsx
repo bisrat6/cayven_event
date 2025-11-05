@@ -61,13 +61,13 @@ const Services: React.FC = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={itemVariants}
-                className={`flex flex-col rounded-lg shadow-lg overflow-hidden ${pkg.popular ? 'border-2 border-brand-gold' : 'border'}`}
+                className={`flex flex-col rounded-lg shadow-lg overflow-hidden ${pkg.popular ? 'border-2 border-primary' : 'border'}`}
               >
                 {pkg.popular && (
-                  <div className="bg-brand-gold text-center py-1 text-white text-sm font-semibold">MOST POPULAR</div>
+                  <div className="bg-primary text-center py-1 text-primary-foreground text-sm font-semibold">MOST POPULAR</div>
                 )}
                 <div className="p-8 bg-white flex-grow">
-                  <h3 className="text-2xl font-semibold font-sans uppercase text-brand-gold">{pkg.name}</h3>
+                  <h3 className="text-2xl font-semibold font-sans uppercase text-primary">{pkg.name}</h3>
                   <p className="mt-4 text-gray-600">{pkg.description}</p>
                   <div className="mt-6">
                     <span className="text-4xl font-bold font-sans text-brand-dark">{pkg.price}</span>
@@ -75,7 +75,7 @@ const Services: React.FC = () => {
                   <ul className="mt-8 space-y-4">
                     {pkg.features.map((feature, i) => (
                       <li key={i} className="flex items-start">
-                        <Check className="flex-shrink-0 h-6 w-6 text-green-500 mr-3" />
+                        <Check className="flex-shrink-0 h-6 w-6 text-primary mr-3" />
                         <span className="text-gray-600">{feature}</span>
                       </li>
                     ))}
@@ -84,7 +84,11 @@ const Services: React.FC = () => {
                 <div className="p-8 bg-gray-50">
                   <a
                     href="/contact"
-                    className="block w-full text-center px-6 py-3 text-sm font-semibold text-white uppercase bg-brand-dark rounded-full shadow-lg transition-transform duration-300 hover:scale-105"
+                    className={`block w-full text-center px-6 py-3 text-sm font-semibold uppercase rounded-full shadow-lg transition-transform duration-300 hover:scale-105 ${
+                      index === 1
+                        ? 'bg-primary text-primary-foreground'
+                        : 'border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground'
+                    }`}
                   >
                     Get Started
                   </a>

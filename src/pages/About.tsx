@@ -41,6 +41,31 @@ const About: React.FC = () => {
         </div>
       </section>
 
+      {/* stats section  */}
+      <section className="py-20 bg-brand-dark text-background">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+              {[
+                { number: "500+", label: "Events Designed" },
+                { number: "10+", label: "Years of Excellence" },
+                { number: "15", label: "Award-Winning Designers" },
+                { number: "100%", label: "Client Satisfaction" },
+              ].map((stat, index) => (
+                <div
+                  key={stat.label}
+                  className="text-center animate-fade-in"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <p className="font-serif text-5xl md:text-6xl font-bold text-primary mb-2">
+                    {stat.number}
+                  </p>
+                  <p className="text-background/80">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
       <section className="py-20 lg:py-24 bg-brand-gray">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">

@@ -6,33 +6,67 @@ export const NAV_LINKS = [
   { path: '/contact', label: 'Contact' },
 ];
 
+import portfolioBoho from '../assets/portfolio-boho.jpg';
+import portfolioGala from '../assets/portfolio-gala.jpg';
+import portfolioMoroccan from '../assets/portfolio-moroccan.jpg';
+
+// New local portfolio images
+import BirthDay1 from '../assets/BirthDay1.PNG';
+import BirthDay2 from '../assets/BirthDay2.PNG';
+import BirthDay3 from '../assets/BirthDay3.JPG';
+import BirthDay4 from '../assets/BirthDay4.PNG';
+import BirthDay5 from '../assets/BirthDay5.PNG';
+import BirthDay6 from '../assets/BirthDay6.PNG';
+import BirthDay7 from '../assets/BirthDay7.PNG';
+import Cultural1 from '../assets/Cultural1.PNG';
+import cultural2 from '../assets/cultural2.PNG';
+import Engagment1 from '../assets/Engagment1.PNG';
+import engagment2 from '../assets/engagment2.PNG';
+import family1 from '../assets/family1.PNG';
+import family2 from '../assets/family2.PNG';
+import wedding1 from '../assets/wedding1.JPG';
+import wedding2 from '../assets/wedding2.PNG';
+
 export const SERVICES_HIGHLIGHT = [
   {
     title: 'Wedding Decoration',
     description: 'Breathtaking designs for your special day, from floral arrangements to stage setups.',
-    image: 'https://images.unsplash.com/photo-1595843485129-96808ae7c262?q=80&w=1935',
+    image: portfolioBoho,
   },
   {
     title: 'Corporate Events',
     description: 'Professional and elegant decor for conferences, galas, and corporate gatherings.',
-    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070',
+    image: portfolioGala,
   },
   {
     title: 'Special Celebrations',
     description: 'Creative and fun decorations for birthdays, baby showers, and cultural events.',
-    image: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070',
+    image: portfolioMoroccan,
   },
 ];
 
 export const PORTFOLIO_ITEMS = [
-  { id: 1, category: 'weddings', src: 'https://images.unsplash.com/photo-1522040817-9998634917fa?q=80&w=1964', title: 'Lakeside Wedding' },
-  { id: 2, category: 'corporate', src: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1974', title: 'Annual Tech Gala' },
-  { id    : 3, category: 'celebrations', src: 'https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=2162', title: 'Golden Birthday Bash' },
-  { id: 4, category: 'weddings', src: 'https://images.unsplash.com/photo-1597986368988-38108167555f?q=80&w=1964', title: 'Garden Ceremony' },
-  { id: 5, category: 'weddings', src: 'https://images.unsplash.com/photo-1592247353467-684c514a9518?q=80&w=1964', title: 'Rustic Barn Wedding' },
-  { id: 6, category: 'corporate', src: 'https://images.unsplash.com/photo-1511578314322-37996166da26?q=80&w=2070', title: 'Product Launch' },
-  { id: 7, category: 'celebrations', src: 'https://images.unsplash.com/photo-1600294038569-745a55593433?q=80&w=1935', title: 'Enchanted Baby Shower' },
-  { id: 8, category: 'weddings', src: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1965', title: 'Elegant Ballroom Reception' },
+  // Wedding & Engagement
+  { id: 2, category: 'wedding and engagment', src: Engagment1, title: 'Engagement Styling' },
+  { id: 3, category: 'wedding and engagment', src: engagment2, title: 'Engagement Reception' },
+  { id: 14, category: 'family and cultural', src: cultural2, title: 'Cultural Event 2' },
+  { id: 4, category: 'wedding and engagment', src: wedding1, title: 'Wedding Stage' },
+  
+  // Birthday
+  { id: 6, category: 'Birthday', src: BirthDay1, title: 'Birthday Decor 1' },
+  { id: 7, category: 'Birthday', src: BirthDay3, title: 'Birthday Decor 3' },
+  { id: 8, category: 'Birthday', src: BirthDay2, title: 'Birthday Decor 2' },
+  { id: 9, category: 'Birthday', src: BirthDay4, title: 'Birthday Decor 4' },
+  { id: 10, category: 'Birthday', src: BirthDay5, title: 'Birthday Decor 5' },
+  { id: 11, category: 'Birthday', src: BirthDay6, title: 'Birthday Decor 6' },
+  { id: 12, category: 'Birthday', src: BirthDay7, title: 'Birthday Decor 7' },
+  
+  { id: 5, category: 'wedding and engagment', src: wedding2, title: 'Wedding Details' },
+  // Family & Cultural
+  { id: 13, category: 'family and cultural', src: Cultural1, title: 'Cultural Event 1' },
+  { id: 15, category: 'family and cultural', src: family1, title: 'Family Celebration 1' },
+  { id: 16, category: 'family and cultural', src: family2, title: 'Family Celebration 2' },
+
 ];
 
 export const TESTIMONIALS = [

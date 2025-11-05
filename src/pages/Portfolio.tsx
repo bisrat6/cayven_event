@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { PORTFOLIO_ITEMS } from '../constants';
 
-const filters = ['all', 'weddings', 'corporate', 'celebrations'];
+const filters = ['all', 'wedding & engagment', 'Birthday', 'family & cultural'];
 
 const Portfolio: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -23,15 +23,15 @@ const Portfolio: React.FC = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Filters */}
-        <div className="flex justify-center flex-wrap gap-2 md:gap-4 mb-12">
+        <div className="flex gap-2 md:gap-4 mb-12 overflow-x-auto whitespace-nowrap flex-nowrap px-1">
           {filters.map(filter => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
               className={`px-6 py-2 text-sm font-semibold rounded-full transition-colors duration-300 capitalize ${
                 activeFilter === filter
-                  ? 'bg-brand-gold text-white shadow-md'
-                  : 'bg-gray-200 text-gray-700 hover:bg-brand-gold hover:text-white'
+                  ? 'bg-primary text-primary-foreground shadow-md'
+                  : 'bg-gray-200 text-gray-700 hover:bg-primary hover:text-primary-foreground'
               }`}
             >
               {filter}
@@ -40,7 +40,7 @@ const Portfolio: React.FC = () => {
         </div>
 
         {/* Gallery */}
-        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence>
             {filteredItems.map(item => (
               <motion.div
@@ -50,12 +50,22 @@ const Portfolio: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.4 }}
-                className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer"
+                className="group relative overflow-hidden rounded-xl shadow-soft hover:shadow-elegant transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedImg(item.src)}
               >
-                <img src={item.src} alt={item.title} className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
-                  <p className="text-white text-xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">{item.title}</p>
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={item.src}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                  <div className="p-6 text-background transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 w-full">
+                    <h3 className="font-serif text-2xl font-bold mb-2 text-white">{item.title}</h3>
+                    {item.category && <p className="text-primary font-medium">{item.category}</p>}
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -82,7 +92,7 @@ const Portfolio: React.FC = () => {
             />
             <button
               onClick={() => setSelectedImg(null)}
-              className="absolute top-4 right-4 text-white hover:text-brand-gold transition-colors"
+              className="absolute top-4 right-4 text-white hover:text-primary transition-colors"
             >
               <X size={32} />
             </button>

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { PORTFOLIO_ITEMS } from '../constants';
 
-const filters = ['all', 'wedding & engagment', 'Birthday', 'family & cultural'];
+const filters = ['all', 'wedding and engagment', 'Birthday', 'family and cultural'];
 
 const Portfolio: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');

@@ -71,7 +71,7 @@ export const PORTFOLIO_ITEMS = [
 
 export const TESTIMONIALS = [
     {
-        quote: "Hulet Events transformed our venue into a fairytale wonderland. Their attention to detail was impeccable. We couldn't have asked for a more magical wedding day!",
+        quote: "Cayven Event transformed our venue into a fairytale wonderland. Their attention to detail was impeccable. We couldn't have asked for a more magical wedding day!",
         name: "Jessica & Tom",
         event: "Wedding",
         rating: 5,

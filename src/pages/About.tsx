@@ -26,12 +26,12 @@ const About: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={itemVariants}>
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070" alt="Hulet Events Team" className="rounded-lg shadow-2xl" />
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070" alt="Cayven Event Team" className="rounded-lg shadow-2xl" />
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={itemVariants}>
-              <h2 className="text-3xl md:text-4xl font-serif">Welcome to Hulet Events</h2>
+              <h2 className="text-3xl md:text-4xl font-serif">Welcome to Cayven Event</h2>
               <p className="mt-6 text-gray-600 leading-relaxed">
-                Founded on a passion for creating unforgettable moments, Hulet Events has grown into a premier event design and management company. We believe that every event has a story to tell, and our mission is to tell it beautifully.
+                Founded on a passion for creating unforgettable moments, Cayven Event has grown into a premier event design and management company. We believe that every event has a story to tell, and our mission is to tell it beautifully.
               </p>
               <p className="mt-4 text-gray-600 leading-relaxed">
                 Our team of creative designers, meticulous planners, and skilled artisans work in harmony to bring your vision to life. From the grandest gestures to the smallest details, we pour our hearts into making your celebration truly magical and uniquely yours.

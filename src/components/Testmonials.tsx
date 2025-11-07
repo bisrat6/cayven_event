@@ -1,43 +1,20 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { Button } from "./ui/button";
-
-const testimonials = [
-  {
-    id: 1,
-    quote: "LuxeVibe turned our vision into a fairytale. The floral ceiling installation was absolutely breathtaking, and every detail was perfection. Our guests are still talking about it!",
-    author: "Selamawit & Dawit",
-    event: "Luxury Wedding",
-    rating: 5,
-  },
-  {
-    id: 2,
-    quote: "Professional, creative, and flawless execution. Our corporate gala exceeded all expectations. The LED installations and branded elements were stunning and on-point.",
-    author: "Bekele Gebremichael",
-    event: "Tech Company Gala",
-    rating: 5,
-  },
-  {
-    id: 3,
-    quote: "From the first consultation to the final reveal, LuxeVibe was incredible. They transformed our daughter's sweet sixteen into a magical Moroccan paradise. Worth every penny!",
-    author: "Hana Tesfaye",
-    event: "Birthday Celebration",
-    rating: 5,
-  },
-];
+import { TESTIMONIALS } from "../constants";
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const next = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    setCurrentIndex((prev) => (prev + 1) % TESTIMONIALS.length);
   };
 
   const prev = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
   };
 
-  const current = testimonials[currentIndex];
+  const current = TESTIMONIALS[currentIndex];
 
   return (
     <section className="py-20 bg-background">
@@ -68,7 +45,7 @@ const Testimonials = () => {
 
               <div className="text-center">
                 <p className="font-serif text-xl font-bold text-secondary mb-1">
-                  {current.author}
+                  {current.name}
                 </p>
                 <p className="text-muted-foreground">{current.event}</p>
               </div>
@@ -88,7 +65,7 @@ const Testimonials = () => {
             </Button>
 
             <div className="flex gap-2">
-              {testimonials.map((_, index) => (
+              {TESTIMONIALS.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}

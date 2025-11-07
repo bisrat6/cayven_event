@@ -70,24 +70,27 @@ export const PORTFOLIO_ITEMS = [
 ];
 
 export const TESTIMONIALS = [
-    {
-        quote: "Cayven Event transformed our venue into a fairytale wonderland. Their attention to detail was impeccable. We couldn't have asked for a more magical wedding day!",
-        name: "Jessica & Tom",
-        event: "Wedding",
-        rating: 5,
-    },
-    {
-        quote: "The team was professional, creative, and an absolute pleasure to work with. They handled our annual corporate gala flawlessly, impressing all our stakeholders.",
-        name: "Sarah Chen",
-        event: "Corporate Gala",
-        rating: 5,
-    },
-    {
-        quote: "From the balloon decor to the stunning stage setup for my daughter's birthday, everything was perfect. They truly listened to our ideas and exceeded our expectations.",
-        name: "Maria Rodriguez",
-        event: "Birthday Party",
-        rating: 5,
-    },
+  {
+    id: 1,
+    quote: "Cayven Event turned our vision into a fairytale. The floral ceiling installation was absolutely breathtaking, and every detail was perfection. Our guests are still talking about it!",
+    author: "Selamawit & Dawit",
+    event: "Luxury Wedding",
+    rating: 5,
+  },
+  {
+    id: 2,
+    quote: "The team was professional, creative, and an absolute pleasure to work with. They handled our annual corporate gala flawlessly, impressing all our stakeholders.",
+    author: "Bekele Gebremichael",
+    event: "Tech Company Gala",
+    rating: 5,
+  },
+  {
+    id: 3,
+    quote: "From the balloon decor to the stunning stage setup for my daughter's birthday, everything was perfect. They truly listened to our ideas and exceeded our expectations.",
+    author: "Hana Tesfaye",
+    event: "Birthday Celebration",
+    rating: 5,
+  },
 ];
 
 export const PRICING_PACKAGES = [
